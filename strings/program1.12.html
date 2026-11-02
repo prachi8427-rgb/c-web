@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Program 12</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 12 - Copy String in Reverse Order</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter the string from user and copy reverse order into another string.</p>
+	<h2>Logic</h2>
+	<p>Find the length of the string and copy its characters from the last position to the first position into another string.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+	char str[20], str2[20];
+	int i, num;
+
+	printf("Enter a string: ");
+	gets(str);
+
+	num = strlen(str) - 1;
+
+	for(i = 0; num >= 0; i++)
+	{
+		str2[i] = str[num];
+		num--;
+	}
+
+	str2[i] = '\0';
+
+	printf("Original string: %s\n",str);
+	printf("Copied string: %s",str2);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a string: Welcome to PGGC-11
+Original string: Welcome to PGGC-11
+Copied string: 11-CGGP ot emocleW
+
+</pre>
+	
+
+</body>
+</html>

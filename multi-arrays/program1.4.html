@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Program 04</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 04 - Subtract Two Matrices</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter 2 matrix from user and subtract them.</p>
+	<h2>Logic</h2>
+	<p>Subtract the corresponding elements of both matrices and store the result in a third matrix.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num[2][2], b[2][2], sub[2][2], i, j;
+
+	printf("Enter 4 values in first matrix: \n");
+	
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&num[i][j]);
+		}
+	}
+	printf("Enter 4 values in second matrix: \n");
+	
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
+	}
+
+
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			sub[i][j] = num[i][j] - b[i][j];
+		}
+	}
+
+
+	printf("\nSubtraction of Matrices : \n");
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&sub[i][j]);
+		}
+		printf("\n");
+	}	
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter 4 values in first matrix: 
+10 20
+30 40
+Enter 4 values in second matrix: 
+1 2
+3 4
+
+Subtraction of Matrices : 
+9 18
+27 36
+</pre>
+	
+</body>
+</html>

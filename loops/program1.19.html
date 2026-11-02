@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Program 19</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 19 - Password Input up to 20 character</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter password from user maximum 20 digits / character press enter key if you want to exit.</p>
+	<h2>Logic</h2>
+	<p>Use a character array to store the password and a for loop to accept up to 20 characters.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int i;
+	char pass[21];
+
+	printf("Enter password : ");
+	for(i = 0; i < 20; i++)
+	{
+		pass[i] = getche();
+
+		if(pass[i] == 13)
+		break;
+	}
+
+	pass[i] = '\0';
+	printf("\nPassword: %s",pass);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter password : Prachi/4017/26
+Password: Prachi/4017/26
+</pre>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Program 21</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 21 - Print Fibonacci Series up to 100</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to find out the Fibonacci series/ 1 to 100 (like 0 1 1 2 3 5 8 13………).</p>
+	<h2>Logic</h2>
+	<p>Start with 0 and 1. Use a while loop to print each term and calculate the next term by adding the previous two terms.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int a = 0, b = 1, c;
+
+	while(a <= 100){
+		printf("%d ",a);
+
+		c = a + b;
+		a = b;
+		b = c;
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+0 1 1 2 3 5 8 13 21 24 34 55 89
+</pre>
+	
+
+</body>
+</html>

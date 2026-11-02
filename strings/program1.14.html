@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Program 14</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 14 - Check Whether Character Exists</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter the string from user and enter a character , it is exist or not.</p>
+	<h2>Logic</h2>
+	<p>Compare the entered character with each character of the string. If a match is found, display that the character exists.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	char str[20], ch;
+	int i, found = 0;
+
+	printf("Enter a string: ");
+	gets(str);
+	printf("Enter a character: ");
+	ch = getche();
+	
+	for(i = 0; str[i] != '\0'; i++)
+	{
+		if(str[i] == ch)
+		{
+			found = 1;
+			break;
+		}
+	}
+
+	if(found == 1)
+	  printf("Character exists in string.");
+	else
+	  printf("Character doesn't exists in string.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a string: Prachi
+Enter a character: h
+Character exists in string.
+</pre>
+	
+</body>
+</html>

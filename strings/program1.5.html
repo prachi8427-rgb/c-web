@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Program 05</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 05 - Convert String into Toggle Case</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a string from user and convert into toggle case.</p>
+	<h2>Logic</h2>
+	<p>Convert the uppercase letters into lowercase and lowercase letters into uppercase.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	char str[20];
+	int i;
+
+	printf("Enter a string: ");
+	gets(str);
+
+	for(i = 0; str[i] != '\0'; i++)
+	{
+		if(str[i] >= 'a' && str[i] <= 'z')
+		{
+	        str[i] = str[i] - 32;
+		}
+
+		else if(str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] = str[i] + 32;
+		}
+	}
+
+	printf("Toggle case: %s",str);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a string: cODING Is fUN
+Toggle case: Coding iS Fun
+
+</pre>
+	
+
+</body>
+</html>

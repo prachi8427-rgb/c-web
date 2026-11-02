@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program 06</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 06 - Find Length of String</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a string from user and final length of the string.</p>
+	<h2>Logic</h2>
+	<p>Use strlen() function to count the total characters in the string.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+	char str[20];
+	int num;
+
+	printf("Enter a string: ");
+	gets(str);
+
+	num = strlen(str);
+
+	printf("Length of string: %d",num);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a string: Programming is fun
+Length of string: 18
+
+</pre>
+	
+</body>
+</html>

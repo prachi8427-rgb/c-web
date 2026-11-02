@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Program 05</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 05 - Check Whether a Number Is Decimal</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter a number from the user and check it is a decimal number or not.</p>
+	<h2>Logic</h2>
+	<p>Compare the decimal number with its integer value to check whether it has a fractional part.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	float num;
+	int no;
+
+	printf("Enter a number: ");
+	scanf("%f",&num);
+
+	no = num;
+
+	if(num != no)
+		printf("Decimal number");
+	else 
+	  printf("Integer number");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a number: 12.5
+Decimal number
+
+</pre>
+	
+</body>
+</html>

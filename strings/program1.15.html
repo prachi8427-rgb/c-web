@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Program 15</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 15 - Find Position of Character</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter the string from user and enter a character if it is exist then print the bound number.</p>
+	<h2>Logic</h2>
+	<p>Compare the entered character with each character of the string and print its position when a match is found.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	char str[20], ch;
+	int i, found = 0;
+
+	printf("Enter a string: ");
+	gets(str);
+	printf("Enter a character: ");
+	ch = getche();
+	
+	for(i = 0; str[i] != '\0'; i++)
+	{
+		if(str[i] == ch)
+		{
+			printf("Character found at position: %d", i + 1);
+			found = 1;
+			break;
+		}
+	}
+
+	if(found == 0)
+	  printf("Character not found.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a string: Prachi
+Enter a character: h
+Character found at position: 5
+</pre>
+	
+
+</body>
+</html>

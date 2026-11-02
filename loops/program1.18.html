@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Program 18</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 18 - Print the Range Between Two Numbers</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter two numbers from user and print range from first number to second number.</p>
+	<h2>Logic</h2>
+	<p>Use a for loop to print each number from first number to the second number.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num1, num2, i;
+
+	printf("Enter starting number: ");
+	scanf("%d",&num1);
+	printf("Enter ending number: ");
+	scanf("%d",&num2);
+
+	for(i = num1; i <= num2; i++)
+	{
+		printf("%d ",i);
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter starting number: 87
+Enter ending number: 103
+87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103
+</pre>
+	
+
+</body>
+</html>

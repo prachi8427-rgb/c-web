@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Program 13</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 13 - Difference Between Characters of Two Strings</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter two string from user and print difference each character.</p>
+	<h2>Logic</h2>
+	<p>Subtract the ASCII value of each character of the second string from the corresponding character of the first string.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	char str[20], str2[20];
+	int i, diff;
+
+	printf("Enter first string: ");
+	gets(str);
+	printf("Enter second string: ");
+	gets(str2);
+
+	for(i = 0; str[i] != '\0' && str2[i] != '\0'; i++)
+	{
+		printf("Difference of %c and %c = %d\n",str[i],str2[i],diff);
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter first string: ABC
+Enter second string: XYZ
+Difference of A and X = -23
+Difference of B and Y = -23
+Difference of C and Z = -23
+
+</pre>
+	
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Program 22</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 22 - Check Whether a Character is an Alphabet</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a character from user and that character should be alphabet.</p>
+	<h2>Logic</h2>
+	<p>Check whether the entered character lies between A and Z or between a and b using if-else.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	char ch;
+
+	printf("Enter a character: ");
+	ch = getche();
+
+	if(ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z')
+	  printf("It is an Alphabet.");
+
+	else
+	  printf("It is not an Alphabet.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a character: S 
+It is an Alphabet.
+</pre>
+	
+
+</body>
+</html>

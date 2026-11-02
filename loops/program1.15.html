@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+	<title>Program 15</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 15 - Print the First Digit of a Number</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a number from user and print first digit of number.</p>
+	<h2>Logic</h2>
+	<p>Divide the number by 10 until only one digit remains.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num;
+
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	while(num >= 10)
+	{
+		num = num / 10;
+	}
+
+	printf("First digit = %d",num);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a number: 4087
+First digit = 4
+</pre>
+	
+</body>
+</html>

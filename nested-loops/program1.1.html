@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Program 01</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 01 - Print 11111 Pattern</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program print the pattern on the screen i.e. ?
+11111
+11111
+11111</p>
+	<h2>Logic</h2>
+	<p>Use two nested for loops. The outer loop controls the rows and the inner loop prints 1 five times in each row.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int i, j;
+
+	for(i = 0; i <= 3; i++)
+	{
+		for(j = 0; j <= 5; j++)
+		{
+			printf("1");
+		}
+	  printf("\n");
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+11111
+11111
+11111
+
+</pre>
+	
+</body>
+</html>

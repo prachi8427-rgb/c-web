@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Program 02</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 02 - Find Transpose of a Matrix</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter the matrix from and transpose them.</p>
+	<h2>Logic</h2>
+	<p>Interchange the rows and columns of the matrix to find its transponse.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num[2][2], i, j;
+
+	printf("Enter 4 values: \n");
+	
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&num[i][j]);
+		}
+	}
+
+	printf("\nOriginal Matrix : \n");
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&num[i][j]);
+		}
+		printf("\n");
+	}	
+
+	printf("Transpose Matrix:\n");
+	for(i = 0; i<=1; i++)
+	{
+		for(j = 0; j <= 1; j++)
+		{
+			printf("%d ",num[j][i]);
+		}
+	}
+
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter 4 values: 
+10
+20
+30
+40
+
+Original Matrix : 
+10 20
+30 40
+
+Transpose Matrix:
+10 30
+20 40
+</pre>
+	
+</body>
+</html>
