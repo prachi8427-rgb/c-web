@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Program 07</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 07 - Find Power of a Number</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Make function for find out power of number, enter the number and power from user.</p>
+
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+int power(int a, int b)
+{
+	int i, result = 1;
+	for(i = 1; i <= b; i++)
+	{
+		result = result * a;
+	}
+
+	return result;
+}
+
+void main()
+{
+	int base, exp, res;
+
+	printf("Enter base: ");
+	scanf("%d",&base);
+	printf("Enter exponent: ");
+	scanf("%d",&exp);
+	
+	res = power(base,exp);
+
+	printf("\n%d raised to the power %d = %d",base ,exp ,res);
+
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter base: 2
+Enter exponent: 5
+
+
+2 raised to the power 5 = 32
+</pre>
+	
+
+</body>
+</html>

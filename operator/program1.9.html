@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program 09</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 09 - Round Off a Decimal Number</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a decimal number and round it off to the nearest integer.</p>
+	<h2>Logic</h2>
+	<p>Add 0.5 to the positive decimal number and convert it into a integer.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	float num;
+	int round;
+	
+	printf("Enter a decimal number: ");
+	scanf("%f",&num);
+	
+	round = (int)(num + 0.5);
+
+	printf("Rounded number = %d",round);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a decimal number: 57.8
+Rounded number = 58
+
+</pre>
+	
+
+</body>
+</html>

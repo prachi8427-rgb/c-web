@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Program 03</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 03 - Return an array from function</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to return an array from function.</p>
+
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+int * fun()
+{
+	static int a[]={10,20,30,40,50};
+	return a;
+}
+
+void main()
+{
+	int *p, i;
+	p = fun();
+
+	printf("Array elements are:\n");
+
+	for(i = 0; i < 5; i++)
+	{
+		printf("%d\n",*p);
+		p++;
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Array elements are:
+10
+20
+30
+40
+50
+</pre>
+	
+</body>
+</html>
