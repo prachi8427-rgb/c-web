@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Program 01</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 01 - Capital Data Only</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter file name and data from user and put data in file but data should be in capital letter.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    char f[10], data[30];
+	int i;
+	File * New;
+	printf("Enter file name: ");
+	gets(f);
+	printf("Enter the data: ");
+	gets(data);
+
+	New = fopen(f,"w");
+	for(i = 0; data[i] != '\0'; i++)
+	{
+		if(data >= 'a' && data[i] <= 'z')
+		data[i] = data[i] - 32;
+	}
+	fprintf(New , "%s", data);
+	fclose(New);
+	printf("\nData entered successfully!");
+
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter file name: hi
+Enter the data: live your life at your own
+
+Data entered successfully!
+</pre>
+	</body>
+</html>

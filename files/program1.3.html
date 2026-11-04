@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program 03</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 03 - Copy File</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Create a file and copy that file into another file.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char f[10], data[30], a, *c;
+	FILE * New, *New2;
+	printf("Enter file name: ");
+	gets(f);
+	printf("First enter then use CTRL + S to save... \nFor next line press enter 2 times...\nEnter the data: ");
+	New = fopen(f,"w");
+	do{
+        gets(data);
+        fprintf(New, "%s\n", data);
+        a = getch();}
+        while(a != 19);
+        printf("\nSaved successfully\n");
+    fclose(New);
+
+    New = fopen(f,"r");
+    printf("Enter 2nd file name: ");
+    gets(f);
+    New2 =  fopen(f,"w");
+    do{
+    	c = fgets(data, 50, New);
+    	if(c != 0)
+    	  fprintf(New2, "%s", data);
+    }while(c != 0);
+    fclose(New2);
+    fclose(New);
+    printf("\nData copied successfully.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter file name: file1
+First enter then use CTRL + S to save... 
+For next line press enter 2 times...
+
+Enter the data: Welcome to my webpage
+thank you for visiting 
+see you again!
+
+
+Saved successfully
+Enter 2nd file name: file2
+Data copied successfully.
+</pre>
+	
+</body>
+</html>

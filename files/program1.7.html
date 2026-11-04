@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Program 07</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 07 - Count The Words in File</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Create a file and count the no. of words in it.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char f[10], data[50], a, *c;
+    int x, count = 1;
+    FILE * New;
+	printf("Enter file name: ");
+	gets(f);
+	printf("First enter then use CTRL + S to save... \nFor next line press enter 2 times...\nEnter the data: ");
+	New = fopen(f,"w");
+	do{
+        gets(data);
+        fprintf(New, "%s\n", data);
+        a = getch();}
+        while(a != 19);
+        printf("\nSaved successfully\n\n");
+    fclose(New);
+
+    
+    New = fopen(f, "r");
+    do{
+    	c = fgets(data, 50, New);
+    	if(c != 0){
+    		for(x = 0; data[x] != '\0'; x++){
+    			if(data[x] == ',' || data[x] == ' '){
+    				count++;
+    				x++;
+    			}
+    		}
+    	}
+    	
+    }while(c != 0);
+    fclose(New);
+
+    printf("File have total = %d words.",count);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter file name: f1
+First enter then use CTRL + S to save... 
+For next line press enter 2 times...
+Enter the data: Hello, nice to meet you again
+
+Saved successfully
+
+File have total = 6 words.
+</pre>
+	</body>
+</html>

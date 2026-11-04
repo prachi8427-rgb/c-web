@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Program 02</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 02 - Pointer and 2D-Array</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to input and display the elements of a 2D array of size 2 x 3 using a pointer.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int a[2][3], i, j;
+	int *p;
+
+	p = a;
+
+	for(i = 1; i <= 6; i++)
+	{
+		printf("Enter %d value: ", i);
+		scanf("%d", p);
+		p++;
+	}
+
+	p = a;
+
+	printf("\nArray values: \n");
+	for(i = 0; i < 2; i++)
+	{
+		for(j = 0; j < 3; j++)
+		{
+			printf("%d ",*p);
+			p++;
+		}
+		printf("\n");
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+
+Enter 1 value: 22
+Enter 2 value: 29
+Enter 3 value: 44
+Enter 4 value: 55
+Enter 5 value: 66
+Enter 6 value: 99
+
+Array values: 
+22 29 44 
+55 66 99
+</pre>
+</body>
+</html>

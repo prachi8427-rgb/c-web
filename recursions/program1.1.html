@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Program 01</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 01 - Basic Recursion</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to print numbers from 1 to 5 using recursion.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void ptr(int n)
+{
+	if(n <= 5)
+	{
+		printf("%d ",n);
+		ptr(n + 1);
+	}
+}
+void main()
+{
+	ptr(1);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+1 2 3 4 5
+
+</pre>
+	</body>
+</html>

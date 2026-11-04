@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Program 05</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 05 - Concatenate The File</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Create a file and copy that file into another file.</p>
+	
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char f[10], f2[10], f3[10], data[50], a, *c;
+	FILE * New, *New2, *New3;
+	printf("Enter file name: ");
+	gets(f);
+	printf("First enter then use CTRL + S to save... \nFor next line press enter 2 times...\nEnter the data: ");
+	New = fopen(f,"w");
+	do{
+        gets(data);
+        fprintf(New, "%s\n", data);
+        a = getch();}
+        while(a != 19);
+        printf("\nSaved successfully\n\n");
+    fclose(New);
+
+    printf("Enter 2nd file name: ");
+	gets(f2);
+	printf("First enter then use CTRL + S to save... \nFor next line press enter 2 times...\nEnter the data: ");
+	New2 = fopen(f2,"w");
+	do{
+        gets(data);
+        fprintf(New, "%s\n", data);
+        a = getch();}
+        while(a != 19);
+        printf("\nSaved successfully\n\n");
+    fclose(New2);
+
+    New = fopen(f, "r");
+    New2 = fopen(f2, "r");
+    printf("Enter 3rd file name: ");
+    gets(f3);
+    New3 = fopen(f3, "w");
+    do{
+    	c = fgets(data,50,New);
+    	if(c != 0) fprintf(New3,"%s",data);
+    }while(c != 0);
+    do{
+    	c = fgets(data,50,New2);
+    	if(c != 0) fprintf(New3,"%s",data);
+    }while(c != 0);
+    fclose(New3);
+    fclose(New2);
+    fclose(New);
+    printf("Your files are concatinated.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter file name: file1
+First enter then use CTRL + S to save... 
+For next line press enter 2 times...
+Enter the data: Welcome to my website
+thank you for visiting
+see you again!
+Saved successfully
+
+Enter 2nd file name: file2
+First enter then use CTRL + S to save... 
+For next line press enter 2 times...
+Enter the data: any comments for any changes
+
+Saved successfully
+
+Enter 3rd file name: file3
+Your files are concatinated.
+</pre>
+	
+</body>
+</html>
