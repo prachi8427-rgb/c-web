@@ -23,7 +23,7 @@ struct emp
 void main()
 {
 	struct emp e[50];
-	int i;
+	int i, j;
 
 	for(i = 0; i < 50; i++)
 	{
@@ -41,12 +41,17 @@ void main()
 
 	printf("\n\nEMPLOYEE DETAILS\n");
 	printf("------------------\n");
-	printf("ID\tNAME\n");
+	printf("ID\tNAME CHARACTERS\n");
 	printf("------------------\n");
 
 	for(i = 0; i < 50; i++)
 	{
-	  printf("%d\t%-15s\t%s\n", e[i].id, e[i].name, e[i].designation);
+	  printf("%d\t", e[i].id);
+		for(j = 0; e[i].name[j] != '\0'; j++)
+		{
+		  printf("%c ",e[i].name[j]);
+		}
+	  printf("\n");
 	}
 }
 	</pre>
@@ -55,22 +60,22 @@ void main()
 C:\TURBOC3\BIN&gt;TC
 Enter details of employee 1
 Enter Employee Id: 101
-Enter Name: Rahul
+Enter Name: Gagan
 Enter Designation: Manager
 
 Enter details of employee 2
 Enter Employee Id: 102
-Enter Name: Aman
+Enter Name: Aniket
 Enter Designation: Clerk
 ...
 
 
 EMPLOYEE DETAILS
 ------------------
-ID	NAME	
+ID	NAME CHARACTERS	
 ------------------
-101	Rahul	
-102	Aman	
+101	G a g a n	
+102	A n i k e t	
 ...
 </pre>
 	</body>
